@@ -8,8 +8,16 @@ body, html {
 #title {
     margin: auto;
     text-align: center;
-    width: 50%;
+    width: 10%;
     padding: 10px;
     font-family: cursive;
-    font
+    background-color: aliceblue;
+}
+
+p {
+    text-align: center;
+}
+
+.inline {
+    display: flex;
 }
