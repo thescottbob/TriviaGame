@@ -8,10 +8,11 @@ body, html {
 #title {
     margin: auto;
     text-align: center;
-    width: 10%;
+    width: 16%;
     padding: 10px;
     font-family: cursive;
-    background-color: aliceblue;
+    color: white;
+    background-color: darkblue;
 }
 
 p {
@@ -20,4 +21,7 @@ p {
 
 .inline {
     display: flex;
+    font-size: 35px;
+    margin: auto;
+    padding: 5px;
 }
