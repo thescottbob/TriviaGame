@@ -29,4 +29,13 @@ p {
   justify-content: center;
   }
 
+  ul {
+    list-style: none;
+  }
+
+  .miniButtons {
+    width: 22px;
+    height: 22px;
+  }
+
   
