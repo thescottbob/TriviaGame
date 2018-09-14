@@ -27,20 +27,20 @@ p {
   display: grid;
   align-items: center;
   justify-content: center;
-  }
+}
 
-  ul {
-    list-style: none;
-  }
+#submit {
+  width: 17%;
+  margin: auto;
+}
 
-  #submit {
-    width: 17%;
-    margin: auto;
-  }
+#reload {
+  width:17%;
+  margin:auto;
+}
 
-  button {
-    color: white;
-    background-color: darkblue;
-  }
-
-  
+button {
+  color: white;
+  background-color: darkblue;
+  margin: auto;
+}

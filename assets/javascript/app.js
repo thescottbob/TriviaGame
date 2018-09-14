@@ -1,17 +1,8 @@
-//Declare variables for the Movie section questions, options, and answers
+//Declare variables for the Movie section questions
 var movieQuestion1 = "'It does not do to dwell on dreams and forget to live.'"
-// var movieQuestion1options = ["The Lord of The Rings: The Fellowship of The Ring", "Harry Potter and the Sorceror's Stone", "Moana", "Aladdin"];
-var movieQuestion1correctAnswer = "Harry Potter and the Sorceror's Stone"
-
 var movieQuestion2 =  "'As long as you can still grab a breath, you fight. You breathe...keep breathing.'";
-// var movieQuestion2options = ["The Matrix", "Gladiator", "The Revenant", "Batman Begins"];
-var movieQuestion2correctAnswer = "The Revenant"
-
 var movieQuestion3 =  "'According to the map, we've only gone 4 inches!'";
-var movieQuestion3correctAnswer = "Dumb and Dumber"
-
 var movieQuestion4 =  "'We're not so different, you and I.'";
-var movieQuestion4correctAnswer = "Austin Powers: Goldmember"
 
 //If the 'Books' button is pressed, do the following 
 $(document).ready(function() {
@@ -66,7 +57,6 @@ $(document).ready(function() {
 
   var correctAnswers = 0;
   var incorrectAnswers = 0;
-  var userAnswers = [];
   
   //If uses guesses a correct answer, correctAnswers ++
   $(document).ready(function() {
@@ -86,12 +76,17 @@ $(document).ready(function() {
 $(document).ready(function() {
   $("#correctAnswers").hide();
   $("#incorrectAnswers").hide();
+  $("#reload").hide();
   $("#submit").on("click", function(){
   $(".inline").hide();
   $("#p1").html("Correct Answers:" + " " + correctAnswers + " " + "Incorrect Answers:" + " " + incorrectAnswers);
-  // $("#correctAnswers").show();
-  // $("#incorrectAnswers").show();
-  // $("#correctAnswers").append("0");
-  // $("#incorrectAnswers").append("0");
+  $("#reload").show();
   });
+});
+
+//If the 'Play Again!' button is pressed, reload the page
+$(document).ready(function() {
+$("#reload").on("click", function(){
+  location.reload();
+});
 });

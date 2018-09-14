@@ -26,7 +26,7 @@
 
     <div class="inline">
 
-        <!-- Create a 'Books' button. The answer choices to the 1st question of each quiz will be stored within this div as radio buttons -->
+        <!-- Create a 'Books' button. Answer choices to the 1st question of each quiz will be stored within this the <ul>s as radio buttons -->
         <div>
             <button id="books">Books&nbsp<img src="https://vignette.wikia.nocookie.net/2007scape/images/7/7a/Mage%27s_book_detail.png/revision/latest?cb=20180310083825"
                     width=50px height=50px></button><br>
@@ -44,49 +44,60 @@
         </div>
 
         <br>
-        <!-- Create a 'Movies' button. The answer choices to the 2nd question of each quiz will be stored within this div as radio buttons -->
+        <!-- Create a 'Movies' button. Answer choices to the 2nd question of each quiz will be stored within this the <ul>s as radio buttons -->
         <div>
             <button id="movies">Movies&nbsp<img src="https://storage.googleapis.com/daily-wp-uploads/1/2014/12/Movies.jpg"
                     width=50px height=50px></button><br>
             <ul>
                 <form action="">
-                    <input class="incorrectAnswer" type="radio" name="movieQuestion2option" value="The Matrix"> The Matrix<br>
-                    <input class="incorrectAnswer" type="radio" name="movieQuestion2option" value="Gladiator"> Gladiator<br>
-                    <input class="correctAnswer" type="radio" name="movieQuestion2option" value="The Revenant"> The Revenant<br>
-                    <input class="incorrectAnswer" type="radio" name="movieQuestion2option" value="Batman Begins"> Batman Begins<br>
+                    <input class="incorrectAnswer" type="radio" name="movieQuestion2option" value="The Matrix"> The
+                    Matrix<br>
+                    <input class="incorrectAnswer" type="radio" name="movieQuestion2option" value="Gladiator">
+                    Gladiator<br>
+                    <input class="correctAnswer" type="radio" name="movieQuestion2option" value="The Revenant"> The
+                    Revenant<br>
+                    <input class="incorrectAnswer" type="radio" name="movieQuestion2option" value="Batman Begins">
+                    Batman Begins<br>
                 </form>
             </ul>
         </div>
 
         <br>
-        <!-- Create a 'People' button. The answer choices to the 3rd question of each quiz will be stored within this div as radio buttons -->
+        <!-- Create a 'People' button. Answer choices to the 3rd question of each quiz will be stored within this the <ul>s as radio buttons -->
         <div>
             <button id="people">People&nbsp<img src="https://vignette.wikia.nocookie.net/community-sitcom/images/1/1a/Human_Being.jpeg/revision/latest?cb=20121031153244"
                     width=50px height=50px></button><br>
 
             <ul>
                 <form action="">
-                    <input class="incorrectAnswer" type="radio" name="movieQuestion3option" value="Harold & Kumar Go To White Castle"> Harold &
+                    <input class="incorrectAnswer" type="radio" name="movieQuestion3option" value="Harold & Kumar Go To White Castle">
+                    Harold &
                     Kumar Go To White Castle<br>
                     <input class="incorrectAnswer" type="radio" name="movieQuestion3option" value="Borat"> Borat<br>
-                    <input class="correctAnswer" type="radio" name="movieQuestion3option" value="Dumb and Dumber"> Dumb and Dumber<br>
-                    <input class="incorrectAnswer" type="radio" name="movieQuestion3option" value="Anchorman"> Anchorman<br>
+                    <input class="correctAnswer" type="radio" name="movieQuestion3option" value="Dumb and Dumber"> Dumb
+                    and Dumber<br>
+                    <input class="incorrectAnswer" type="radio" name="movieQuestion3option" value="Anchorman">
+                    Anchorman<br>
                 </form>
             </ul>
         </div>
 
         <br>
-        <!-- Create a 'Songs' button. The answer choices to the 4th question of each quiz will be stored within this div as radio buttons -->
+        <!-- Create a 'Songs' button. Answer choices to the 4th question of each quiz will be stored within this the <ul>s as radio buttons -->
         <div>
             <button id="songs">Songs&nbsp<img src="https://assets.pcmag.com/media/images/469704-apple-music-for-iphone.jpg?width=513&height=245"
                     width=50px height=50px></button><br>
 
             <ul>
                 <form action="">
-                    <input class="incorrectAnswer" type="radio" name="movieQuestion4option" value="Spider Man"> Spider Man<br>
-                    <input class="incorrectAnswer" type="radio" name="movieQuestion4option" value="Man of Steel"> Man of Steel<br>
-                    <input class="incorrectAnswer" type="radio" name="movieQuestion4option" value="Zoolander"> Zoolander<br>
-                    <input class="correctAnswer" type="radio" name="movieQuestion4option" value="Austin Powers: Goldmember"> Austin Powers:
+                    <input class="incorrectAnswer" type="radio" name="movieQuestion4option" value="Spider Man"> Spider
+                    Man<br>
+                    <input class="incorrectAnswer" type="radio" name="movieQuestion4option" value="Man of Steel"> Man
+                    of Steel<br>
+                    <input class="incorrectAnswer" type="radio" name="movieQuestion4option" value="Zoolander">
+                    Zoolander<br>
+                    <input class="correctAnswer" type="radio" name="movieQuestion4option" value="Austin Powers: Goldmember">
+                    Austin Powers:
                     Goldmember<br>
                 </form>
             </ul>
@@ -95,11 +106,11 @@
         <br>
         <!-- Button to submit answers when all four questions in any category are answered -->
         <button id="submit">Submit</button><br>
-        <p id="correctAnswers">Correct Answers: </p>
-        <p id="incorrectAnswers">Incorrect Answers: </p>
 
     </div>
 
+    <!-- Button to reload the page so the user can play again -->
+    <button id="reload">Play Again!</button><br>
 
 </body>
 
