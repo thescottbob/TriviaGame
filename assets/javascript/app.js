@@ -27,9 +27,11 @@ $(document).ready(function() {
   $("ul").hide();
   $("#submit").hide();
   $("#books").click(function(){
-    $(".moviesQuestion1option").hide();
-    $("#p2").hide();
     $("ul").show();
+    $(".moviesQuestion").hide();
+    $(".peopleQuestion").hide();
+    $(".songsQuestion").hide();
+    $("#p2").hide();
     $("#books").html(booksQuestion1);
     $("#movies").html(booksQuestion2);
     $("#people").html(booksQuestion3);
@@ -43,8 +45,11 @@ $(document).ready(function() {
   $("ul").hide();
   $("#submit").hide();
   $("#movies").click(function(){
-    $("#p2").hide();
     $("ul").show();
+    $(".booksQuestion").hide();
+    $(".peopleQuestion").hide();
+    $(".songsQuestion").hide();
+    $("#p2").hide();
     $("#books").html(moviesQuestion1);
     $("#movies").html(moviesQuestion2);
     $("#people").html(moviesQuestion3);
@@ -58,8 +63,11 @@ $(document).ready(function() {
   $("ul").hide();
   $("#submit").hide();
   $("#people").click(function(){
-    $("#p2").hide();
     $("ul").show();
+    $(".booksQuestion").hide();
+    $(".moviesQuestion").hide();
+    $(".songsQuestion").hide();
+    $("#p2").hide();
     $("#books").html(peopleQuestion1);
     $("#movies").html(peopleQuestion2);
     $("#people").html(peopleQuestion3);
@@ -73,8 +81,11 @@ $(document).ready(function() {
   $("ul").hide();
   $("#submit").hide();
   $("#songs").click(function(){
-    $("#p2").hide();
     $("ul").show();
+    $(".booksQuestion").hide();
+    $(".moviesQuestion").hide();
+    $(".peopleQuestion").hide();
+    $("#p2").hide();
     $("#books").html(songsQuestion1);
     $("#movies").html(songsQuestion2);
     $("#people").html(songsQuestion3);
