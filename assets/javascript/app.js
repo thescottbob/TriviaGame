@@ -64,22 +64,31 @@ $(document).ready(function() {
   });
   });
 
-
   var correctAnswers = 0;
-  var incorrectAnswers = 4 - correctAnswers;
+  var incorrectAnswers = 0;
+  var userAnswers = [];
   
-  //If uses guesses a correct answer, correctAnswers += 1; else, incorrectAnswers += 1
-  
-  
-  //If uses guesses a incorrect answer, 
+  //If uses guesses a correct answer, correctAnswers ++
+  $(document).ready(function() {
+    $(".correctAnswer").on("click", function() {
+    correctAnswers++;
+  });
+  });
 
+  //If user guesses an incorrect answer, incorrectAnswers ++
+  $(document).ready(function() {
+    $(".incorrectAnswer").on("click", function() {
+    incorrectAnswers++;
+  });
+  });
+  
 //If the 'Submit' button is pressed, do the following
 $(document).ready(function() {
   $("#correctAnswers").hide();
   $("#incorrectAnswers").hide();
   $("#submit").on("click", function(){
   $(".inline").hide();
-  $("#p1").html("Correct Answers:" + correctAnswers + "Incorrect Answers:" + incorrectAnswers);
+  $("#p1").html("Correct Answers:" + " " + correctAnswers + " " + "Incorrect Answers:" + " " + incorrectAnswers);
   // $("#correctAnswers").show();
   // $("#incorrectAnswers").show();
   // $("#correctAnswers").append("0");
