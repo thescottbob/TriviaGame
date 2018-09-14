@@ -36,6 +36,7 @@ p {
 }
 
 button {
+  margin: auto;
   color: white;
   background-color: darkblue;
 }

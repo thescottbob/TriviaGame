@@ -26,28 +26,42 @@
 
     <div class="inline">
 
-        <!-- Create a 'Books' button. Answer choices to the 1st question of each quiz will be stored within this the <ul>s as radio buttons -->
+        <!-- Create a 'Books' button -->
         <div>
             <button id="books">Books&nbsp<img src="https://vignette.wikia.nocookie.net/2007scape/images/7/7a/Mage%27s_book_detail.png/revision/latest?cb=20180310083825"
                     width=50px height=50px></button><br>
 
+            <!--Answer choices to the 1st question of the 'Books' quiz will be stored within this <ul> as radio buttons -->
             <ul>
-                <form action="">
-                    <input class="incorrectAnswer" type="radio" name="movieQuestion1option" value="The Lord of the Rings: The Fellowship of the Ring">
+                <form class="booksQuestion1option" action="">
+                    <input class="incorrectAnswer" type="radio" name="booksQuestion1option" value="Horton Hears a Who"> Horton Hears a Who<br>
+                    <input class="incorrectAnswer" type="radio" name="booksQuestion1option" value="The Hardy Boys: While the Clock Ticked">
+                    The Hardy Boys: While the Clock Ticked<br>
+                    <input class="correctAnswer" type="radio" name="booksQuestion1option" value="The Hobbit"> The Hobbit<br>
+                    <input class="incorrectAnswer" type="radio" name="booksQuestion1option" value="Harry Potter and the Chamber of Secrets"> Harry Potter and the Chamber of Secrets<br>
+                </form>
+            </ul>
+
+            <!--Answer choices to the 1st question of the 'Movies' quiz will be stored within this <ul> as radio buttons -->
+            <ul>
+                <form class="moviesQuestion1option" action="">
+                    <input class="incorrectAnswer" type="radio" name="moviesQuestion1option" value="The Lord of the Rings: The Fellowship of the Ring">
                     The Lord of the Rings: The Fellowship of the Ring<br>
-                    <input class="correctAnswer" type="radio" name="movieQuestion1option" value="Harry Potter and the Sorceror's Stone">
+                    <input class="correctAnswer" type="radio" name="moviesQuestion1option" value="Harry Potter and the Sorceror's Stone">
                     Harry Potter and the Sorceror's Stone<br>
-                    <input class="incorrectAnswer" type="radio" name="movieQuestion1option" value="Moana"> Moana<br>
-                    <input class="incorrectAnswer" type="radio" name="movieQuestion1option" value="Aladdin"> Aladdin<br>
+                    <input class="incorrectAnswer" type="radio" name="moviesQuestion1option" value="Moana"> Moana<br>
+                    <input class="incorrectAnswer" type="radio" name="moviesQuestion1option" value="Aladdin"> Aladdin<br>
                 </form>
             </ul>
         </div>
 
         <br>
-        <!-- Create a 'Movies' button. Answer choices to the 2nd question of each quiz will be stored within this the <ul>s as radio buttons -->
+        <!-- Create a 'Movies' button -->
         <div>
             <button id="movies">Movies&nbsp<img src="https://storage.googleapis.com/daily-wp-uploads/1/2014/12/Movies.jpg"
                     width=50px height=50px></button><br>
+
+            <!--Answer choices to the 2nd question of the 'Movies' quiz will be stored within this <ul> as radio buttons -->
             <ul>
                 <form action="">
                     <input class="incorrectAnswer" type="radio" name="movieQuestion2option" value="The Matrix"> The
@@ -63,11 +77,12 @@
         </div>
 
         <br>
-        <!-- Create a 'People' button. Answer choices to the 3rd question of each quiz will be stored within this the <ul>s as radio buttons -->
+        <!-- Create a 'People' button -->
         <div>
             <button id="people">People&nbsp<img src="https://vignette.wikia.nocookie.net/community-sitcom/images/1/1a/Human_Being.jpeg/revision/latest?cb=20121031153244"
                     width=50px height=50px></button><br>
 
+            <!--Answer choices to the 3rd question of the 'Movies' quiz will be stored within this <ul> as radio buttons -->
             <ul>
                 <form action="">
                     <input class="incorrectAnswer" type="radio" name="movieQuestion3option" value="Harold & Kumar Go To White Castle">
@@ -83,11 +98,12 @@
         </div>
 
         <br>
-        <!-- Create a 'Songs' button. Answer choices to the 4th question of each quiz will be stored within this the <ul>s as radio buttons -->
+        <!-- Create a 'Songs' button -->
         <div>
             <button id="songs">Songs&nbsp<img src="https://assets.pcmag.com/media/images/469704-apple-music-for-iphone.jpg?width=513&height=245"
                     width=50px height=50px></button><br>
 
+            <!--Answer choices to the 4th question of the 'Movies' quiz will be stored within this <ul> as radio buttons -->
             <ul>
                 <form action="">
                     <input class="incorrectAnswer" type="radio" name="movieQuestion4option" value="Spider Man"> Spider
