@@ -28,6 +28,7 @@ $(document).ready(function() {
 //If the 'Movies' button is pressed, do the following 
 $(document).ready(function() {
   $("ul").hide();
+  $("#submit").hide();
   $("#movies").click(function(){
     $("#p2").hide();
     $("ul").show();
@@ -35,6 +36,7 @@ $(document).ready(function() {
     $("#movies").html(movieQuestion2);
     $("#people").html(movieQuestion3);
     $("#songs").html(movieQuestion4);
+    $("#submit").show();
   });
 });
 
@@ -62,6 +64,7 @@ $(document).ready(function() {
   });
   });
 
+//If any of the miniButtons are clicked on, then place a check mark within that miniButton
 $(document).ready(function() {
   $(".miniButtons").on("click", function(){
   $(this).html("&#10003;");
