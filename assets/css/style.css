@@ -32,15 +32,17 @@ p {
 #submit {
   width: 17%;
   margin: auto;
-}
-
-#reload {
-  width:17%;
-  margin:auto;
+  justify-content: center;
 }
 
 button {
   color: white;
   background-color: darkblue;
+}
+
+#reloadButton {
   margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
