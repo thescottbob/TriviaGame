@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Say What?</title>
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" 
+        integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <script src="assets/javascript/app.js"></script>
 </head>
 
@@ -19,41 +20,26 @@
         <h1><em>Say What?</em></h1>
     </div><br>
 
-    <p><strong>Earn points by correctly identifying the source of each quote.</strong></p><br>
+    <p><strong>Earn points by correctly identifying the source of each quote.</strong></p>
 
     <p><strong>Please select from one of the following categories:</strong></p><br>
 
-    <div>
+    <div class="inline">
 
-        <div id="books">
-        <button class="inline">Books&nbsp<img src="https://vignette.wikia.nocookie.net/2007scape/images/7/7a/Mage%27s_book_detail.png/revision/latest?cb=20180310083825"
-        width=50px height=50px></button><br>
-        </div>
+        <button id="books">Books&nbsp<img src="https://vignette.wikia.nocookie.net/2007scape/images/7/7a/Mage%27s_book_detail.png/revision/latest?cb=20180310083825"
+                width=50px height=50px></button><br><br>
 
-        <div id="movies">
-        <button class="inline">Movies&nbsp<img src="https://storage.googleapis.com/daily-wp-uploads/1/2014/12/Movies.jpg"
-        width=50px height=50px></button><br>
-        </div>
+        <button id="movies">Movies&nbsp<img src="https://storage.googleapis.com/daily-wp-uploads/1/2014/12/Movies.jpg"
+                width=50px height=50px></button><br><br>
 
-        <div id="people">
-        <button class="inline">People&nbsp<img src="https://vignette.wikia.nocookie.net/community-sitcom/images/1/1a/Human_Being.jpeg/revision/latest?cb=20121031153244"
-        width=50px height=50px></button><br>
-        </div>
+        <button id="people">People&nbsp<img src="https://vignette.wikia.nocookie.net/community-sitcom/images/1/1a/Human_Being.jpeg/revision/latest?cb=20121031153244"
+                width=50px height=50px></button><br><br>
 
-        <div id="songs">
-        <button class="inline">Songs&nbsp<img src="https://assets.pcmag.com/media/images/469704-apple-music-for-iphone.jpg?width=513&height=245"
-        width=50px height=50px></button><br>
-        </div>
+        <button id="songs">Songs&nbsp<img src="https://assets.pcmag.com/media/images/469704-apple-music-for-iphone.jpg?width=513&height=245"
+                width=50px height=50px></button><br><br>
 
     </div>
 
-    <!-- 
-        <script>
-        $(document).ready(function(){
-            $(".inline").remove();
-        });
-        </script>
-    -->
 
 </body>
 
