@@ -22,7 +22,11 @@ p {
 
 .inline {
   margin: auto;
-  display: inline;
-  font-size: 35px;
+  font-size: 25px;
   padding: 5px;
-}
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  }
+
+  
