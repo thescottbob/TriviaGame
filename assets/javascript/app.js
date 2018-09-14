@@ -64,9 +64,25 @@ $(document).ready(function() {
   });
   });
 
-//If any of the miniButtons are clicked on, then place a check mark within that miniButton
+
+  var correctAnswers = 0;
+  var incorrectAnswers = 4 - correctAnswers;
+  
+  //If uses guesses a correct answer, correctAnswers += 1; else, incorrectAnswers += 1
+  
+  
+  //If uses guesses a incorrect answer, 
+
+//If the 'Submit' button is pressed, do the following
 $(document).ready(function() {
-  $(".miniButtons").on("click", function(){
-  $(this).html("&#10003;");
+  $("#correctAnswers").hide();
+  $("#incorrectAnswers").hide();
+  $("#submit").on("click", function(){
+  $(".inline").hide();
+  $("#p1").html("Correct Answers:" + correctAnswers + "Incorrect Answers:" + incorrectAnswers);
+  // $("#correctAnswers").show();
+  // $("#incorrectAnswers").show();
+  // $("#correctAnswers").append("0");
+  // $("#incorrectAnswers").append("0");
   });
 });
