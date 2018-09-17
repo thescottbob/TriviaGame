@@ -121,6 +121,7 @@ $(document).ready(function() {
   $("#incorrectAnswers").hide();
   $("#reload").hide();
   $("#submit").on("click", function() {
+    clearTimeout();
     $(".inline").hide();
     $("#p1").html(
       "Correct Answers:" +
@@ -142,9 +143,9 @@ $(document).ready(function() {
   });
 });
 
-var timeRemaining = 30;
+var timeRemaining = 29;
 
-
+//Create a countdown from 30 seconds to 0 seconds and render it to the page
   function countdown() {
     $("#p1").html(timeRemaining + " " + "seconds remaining");
     timeRemaining += -1;
@@ -162,8 +163,10 @@ var timeRemaining = 30;
     }
   }
 
+//Create the time interval for the countdown function (executed every 1000 milliseconds)
 $(document).ready(function() {
   $("button").on("click", function() {
+    $("#p1").html(" 30 seconds remaining");
     setInterval(countdown, 1000);
   });
 });
