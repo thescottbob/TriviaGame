@@ -26,16 +26,19 @@ var songsQuestion2 = "'.'";
 var songsQuestion3 = "'.'";
 var songsQuestion4 = "'.'";
 
-//If the 'Books' button is pressed, do the following
+//Hide the questions and the submit button until one of the four buttons on the home screen is pressed
 $(document).ready(function() {
   $("ul").hide();
   $("#submit").hide();
+});
+
+//If the 'Books' button is pressed, do the following
+$(document).ready(function() {
   $("#books").click(function() {
     $("ul").show();
     $(".moviesQuestion").hide();
     $(".peopleQuestion").hide();
     $(".songsQuestion").hide();
-    $("#p2").hide();
     $("#books").html(booksQuestion1);
     $("#movies").html(booksQuestion2);
     $("#people").html(booksQuestion3);
@@ -46,14 +49,11 @@ $(document).ready(function() {
 
 //If the 'Movies' button is pressed, do the following
 $(document).ready(function() {
-  $("ul").hide();
-  $("#submit").hide();
   $("#movies").click(function() {
     $("ul").show();
     $(".booksQuestion").hide();
     $(".peopleQuestion").hide();
     $(".songsQuestion").hide();
-    $("#p2").hide();
     $("#books").html(moviesQuestion1);
     $("#movies").html(moviesQuestion2);
     $("#people").html(moviesQuestion3);
@@ -64,14 +64,11 @@ $(document).ready(function() {
 
 //If the 'People' button is pressed, do the following
 $(document).ready(function() {
-  $("ul").hide();
-  $("#submit").hide();
   $("#people").click(function() {
     $("ul").show();
     $(".booksQuestion").hide();
     $(".moviesQuestion").hide();
     $(".songsQuestion").hide();
-    $("#p2").hide();
     $("#books").html(peopleQuestion1);
     $("#movies").html(peopleQuestion2);
     $("#people").html(peopleQuestion3);
@@ -82,14 +79,11 @@ $(document).ready(function() {
 
 //If the 'Songs' button is pressed, do the following
 $(document).ready(function() {
-  $("ul").hide();
-  $("#submit").hide();
   $("#songs").click(function() {
     $("ul").show();
     $(".booksQuestion").hide();
     $(".moviesQuestion").hide();
     $(".peopleQuestion").hide();
-    $("#p2").hide();
     $("#books").html(songsQuestion1);
     $("#movies").html(songsQuestion2);
     $("#people").html(songsQuestion3);
@@ -98,8 +92,9 @@ $(document).ready(function() {
   });
 });
 
+var numQuestions = 4;
 var correctAnswers = 0;
-var incorrectAnswers = 0;
+var incorrectAnswers = numQuestions - correctAnswers;
 
 //If uses clicks a correct answer, correctAnswers ++
 $(document).ready(function() {
@@ -108,12 +103,44 @@ $(document).ready(function() {
   });
 });
 
-//If user clicks an incorrect answer, incorrectAnswers ++
+var timeRemaining = 29;
+
+//Create a countdown from 30 seconds to 0 seconds and render it to the page
+function countdown() {
+  $("#p1").html(timeRemaining + " " + "seconds remaining");
+  timeRemaining += -1;
+  if (timeRemaining === 0) {
+    $("#reload").show();
+    $("#p1").hide();
+    $(".inline").html(
+      "Correct Answers:" +
+        " " +
+        correctAnswers +
+        " " +
+        "Incorrect Answers:" +
+        " " +
+        incorrectAnswers
+    );
+    clearTimeout();
+  }
+}
+
+//Create the time interval for the countdown function (executed every 1000 milliseconds)
 $(document).ready(function() {
-  $(".incorrectAnswer").on("click", function() {
-    incorrectAnswers++;
+  $("button").on("click", function() {
+    $("#p2").hide();
+    $("#p1").html(" 30 seconds remaining");
+    setInterval(countdown, 1000);
   });
 });
+
+// $("#submit").on("click", function() {
+//   //Tally the number of correct answers and display to the page
+//   //If user pressed submit
+//   // Tally the number of incorrect answers and display to the page
+// });
+
+// if(//submit button is pressed && )
 
 //If the 'Submit' button is pressed, do the following
 $(document).ready(function() {
@@ -121,7 +148,7 @@ $(document).ready(function() {
   $("#incorrectAnswers").hide();
   $("#reload").hide();
   $("#submit").on("click", function() {
-    clearTimeout();
+    clearTimeout(countdown);
     $(".inline").hide();
     $("#p1").html(
       "Correct Answers:" +
@@ -140,33 +167,5 @@ $(document).ready(function() {
 $(document).ready(function() {
   $("#reload").on("click", function() {
     location.reload();
-  });
-});
-
-var timeRemaining = 29;
-
-//Create a countdown from 30 seconds to 0 seconds and render it to the page
-  function countdown() {
-    $("#p1").html(timeRemaining + " " + "seconds remaining");
-    timeRemaining += -1;
-    if (timeRemaining === 0) {
-      $("#reload").show();
-      $("#p1").hide();
-      $(".inline").html("Correct Answers:" +
-      " " +
-      correctAnswers +
-      " " +
-      "Incorrect Answers:" +
-      " " +
-      incorrectAnswers);
-      clearTimeout();
-    }
-  }
-
-//Create the time interval for the countdown function (executed every 1000 milliseconds)
-$(document).ready(function() {
-  $("button").on("click", function() {
-    $("#p1").html(" 30 seconds remaining");
-    setInterval(countdown, 1000);
   });
 });
