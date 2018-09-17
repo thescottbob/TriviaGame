@@ -1,32 +1,36 @@
 //Declare variables for the four 'Books' section questions
-var booksQuestion1 = "'There is nothing like looking, if you want to find something.'";
-var booksQuestion2 =  "'Destroying things is much easier than making them.'";
-var booksQuestion3 =  "'Don't waste your love on somebody, who doesn't value it.";
-var booksQuestion4 =  "'I think it's impossible to really understand somebody, what they want, what they believe, and not love them the way they love themselves..'";
+var booksQuestion1 =
+  "'There is nothing like looking, if you want to find something.'";
+var booksQuestion2 = "'Destroying things is much easier than making them.'";
+var booksQuestion3 =
+  "'Don't waste your love on somebody, who doesn't value it.";
+var booksQuestion4 =
+  "'I think it's impossible to really understand somebody, what they want, what they believe, and not love them the way they love themselves..'";
 
 //Declare variables for the four 'Movies' section questions
-var moviesQuestion1 = "'It does not do to dwell on dreams and forget to live.'"
-var moviesQuestion2 =  "'As long as you can still grab a breath, you fight. You breathe...keep breathing.'";
-var moviesQuestion3 =  "'According to the map, we've only gone 4 inches!'";
-var moviesQuestion4 =  "'We're not so different, you and I.'";
+var moviesQuestion1 = "'It does not do to dwell on dreams and forget to live.'";
+var moviesQuestion2 =
+  "'As long as you can still grab a breath, you fight. You breathe...keep breathing.'";
+var moviesQuestion3 = "'According to the map, we've only gone 4 inches!'";
+var moviesQuestion4 = "'We're not so different, you and I.'";
 
 //Declare variables for the four 'People' section questions
-var peopleQuestion1 = "'It does not do to dwell on dreams and forget to live.'"
-var peopleQuestion2 =  "'As long as you can still grab a breath, you fight. You breathe...keep breathing.'";
-var peopleQuestion3 =  "'According to the map, we've only gone 4 inches!'";
-var peopleQuestion4 =  "'We're not so different, you and I.'";
+var peopleQuestion1 = "'.'";
+var peopleQuestion2 = "'.'";
+var peopleQuestion3 = "'.'";
+var peopleQuestion4 = "'.'";
 
 //Declare variables for the four 'Songs' section questions
-var songsQuestion1 = "'It does not do to dwell on dreams and forget to live.'"
-var songsQuestion2 =  "'As long as you can still grab a breath, you fight. You breathe...keep breathing.'";
-var songsQuestion3 =  "'According to the map, we've only gone 4 inches!'";
-var songsQuestion4 =  "'We're not so different, you and I.'";
+var songsQuestion1 = "'.'";
+var songsQuestion2 = "'.'";
+var songsQuestion3 = "'.'";
+var songsQuestion4 = "'.'";
 
-//If the 'Books' button is pressed, do the following 
+//If the 'Books' button is pressed, do the following
 $(document).ready(function() {
   $("ul").hide();
   $("#submit").hide();
-  $("#books").click(function(){
+  $("#books").click(function() {
     $("ul").show();
     $(".moviesQuestion").hide();
     $(".peopleQuestion").hide();
@@ -40,11 +44,11 @@ $(document).ready(function() {
   });
 });
 
-//If the 'Movies' button is pressed, do the following 
+//If the 'Movies' button is pressed, do the following
 $(document).ready(function() {
   $("ul").hide();
   $("#submit").hide();
-  $("#movies").click(function(){
+  $("#movies").click(function() {
     $("ul").show();
     $(".booksQuestion").hide();
     $(".peopleQuestion").hide();
@@ -58,11 +62,11 @@ $(document).ready(function() {
   });
 });
 
-//If the 'People' button is pressed, do the following 
+//If the 'People' button is pressed, do the following
 $(document).ready(function() {
   $("ul").hide();
   $("#submit").hide();
-  $("#people").click(function(){
+  $("#people").click(function() {
     $("ul").show();
     $(".booksQuestion").hide();
     $(".moviesQuestion").hide();
@@ -76,11 +80,11 @@ $(document).ready(function() {
   });
 });
 
-//If the 'Songs' button is pressed, do the following 
+//If the 'Songs' button is pressed, do the following
 $(document).ready(function() {
   $("ul").hide();
   $("#submit").hide();
-  $("#songs").click(function(){
+  $("#songs").click(function() {
     $("ul").show();
     $(".booksQuestion").hide();
     $(".moviesQuestion").hide();
@@ -94,38 +98,72 @@ $(document).ready(function() {
   });
 });
 
-  var correctAnswers = 0;
-  var incorrectAnswers = 0;
-  
-  //If uses guesses a correct answer, correctAnswers ++
-  $(document).ready(function() {
-    $(".correctAnswer").on("click", function() {
+var correctAnswers = 0;
+var incorrectAnswers = 0;
+
+//If uses clicks a correct answer, correctAnswers ++
+$(document).ready(function() {
+  $(".correctAnswer").on("click", function() {
     correctAnswers++;
   });
-  });
+});
 
-  //If user guesses an incorrect answer, incorrectAnswers ++
-  $(document).ready(function() {
-    $(".incorrectAnswer").on("click", function() {
+//If user clicks an incorrect answer, incorrectAnswers ++
+$(document).ready(function() {
+  $(".incorrectAnswer").on("click", function() {
     incorrectAnswers++;
   });
-  });
-  
+});
+
 //If the 'Submit' button is pressed, do the following
 $(document).ready(function() {
   $("#correctAnswers").hide();
   $("#incorrectAnswers").hide();
   $("#reload").hide();
-  $("#submit").on("click", function(){
-  $(".inline").hide();
-  $("#p1").html("Correct Answers:" + " " + correctAnswers + " " + "Incorrect Answers:" + " " + incorrectAnswers);
-  $("#reload").show();
+  $("#submit").on("click", function() {
+    $(".inline").hide();
+    $("#p1").html(
+      "Correct Answers:" +
+        " " +
+        correctAnswers +
+        " " +
+        "Incorrect Answers:" +
+        " " +
+        incorrectAnswers
+    );
+    $("#reload").show();
   });
 });
 
 //If the 'Play Again!' button is pressed, reload the page
 $(document).ready(function() {
-$("#reload").on("click", function(){
-  location.reload();
+  $("#reload").on("click", function() {
+    location.reload();
+  });
 });
+
+var timeRemaining = 30;
+
+function countdown() {
+  $("#p1").html(timeRemaining + " " + "seconds remaining");
+  timeRemaining += -1;
+  if (timeRemaining === 0) {
+    $(".inline").hide();
+  $("#p1").html(
+    "Correct Answers:" +
+      " " +
+      correctAnswers +
+      " " +
+      "Incorrect Answers:" +
+      " " +
+      incorrectAnswers
+  );
+  $("#reload").show();
+  }
+}
+
+$(document).ready(function() {
+  $("button").on("click", function() {
+    setInterval(countdown, 1000);
+  });
 });
