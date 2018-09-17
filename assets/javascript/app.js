@@ -144,23 +144,23 @@ $(document).ready(function() {
 
 var timeRemaining = 30;
 
-function countdown() {
-  $("#p1").html(timeRemaining + " " + "seconds remaining");
-  timeRemaining += -1;
-  if (timeRemaining === 0) {
-    $(".inline").hide();
-  $("#p1").html(
-    "Correct Answers:" +
+
+  function countdown() {
+    $("#p1").html(timeRemaining + " " + "seconds remaining");
+    timeRemaining += -1;
+    if (timeRemaining === 0) {
+      $("#reload").show();
+      $("#p1").hide();
+      $(".inline").html("Correct Answers:" +
       " " +
       correctAnswers +
       " " +
       "Incorrect Answers:" +
       " " +
-      incorrectAnswers
-  );
-  $("#reload").show();
+      incorrectAnswers);
+      clearTimeout();
+    }
   }
-}
 
 $(document).ready(function() {
   $("button").on("click", function() {
